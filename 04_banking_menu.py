@@ -10,7 +10,7 @@ while True:
     user_choice = input('Please select an option: ')
     #Process user choice and perform corresponding action
     if user_choice == '1': #Check balance
-        print(f'Your current balance is ${current_balance:.2f}')
+        print(f'Your current balance is ${current_balance:,.2f}')
     elif user_choice == '2': #Deposit
         deposit_amount = float(input('Enter deposit amount: '))
         current_balance += deposit_amount
@@ -19,7 +19,7 @@ while True:
         withdrawal_amount = float(input('Enter withdrawal amount: '))
         if withdrawal_amount > current_balance:
             print('Transaction Decline: Insufficient funds.')
-            print(f'Current balance is ${current_balance:.2f}')
+            print(f'Current balance is ${current_balance:,.2f}')
             continue
         else:
             current_balance -= withdrawal_amount
